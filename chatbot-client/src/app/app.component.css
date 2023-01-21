@@ -1,0 +1,40 @@
+.body { 
+	color: #421; 
+	font-weight: bold; 
+	font-size: 18px; 
+	font-family: "Courier New"; 
+    background:rgb(223 247 229); 
+    content: '';
+    background-image: url('../assets/Chatbot.png');
+    background-repeat: no-repeat; 
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+#main { 
+	position: fixed; 
+	top: 30%; 
+	right: 200px; 
+	width: 400px; 
+	border: 0px solid #421; 
+	padding: 40px; 
+}
+#main div { 
+	margin: 10px; 
+} 
+#input { 
+	border: 0; 
+	padding: 5px; 
+	border: 1px solid #421; 
+}
