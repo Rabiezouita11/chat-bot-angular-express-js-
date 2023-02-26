@@ -14,7 +14,7 @@ export class SocketService {
 
   receivedReply() {
     const observable = new Observable<any>(observer => {
-      this.socket.on('reply', (data) => {
+      this.socket.on('reply', (data: any) => {
         observer.next(data);
       });
       return () => {

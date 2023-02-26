@@ -1,15 +1,14 @@
-<div class="body">
-<div class="content"> 
-   <h1>
-    Welcome to {{ title }}
-  </h1>
-  <div id="main">
-    <div><input id="input" type="text" placeholder="Say something..." autocomplete="off" [(ngModel)]='message' (keyup.enter)="sendMessage()"/></div>
-    <div *ngFor="let item of messageArray">
+<div class="chatbot-container">
+  <div class="chatbot-header">
+    <h1>Welcome to {{ title }}</h1>
+  </div>
+  <div class="chatbot-messages">
+    <div *ngFor="let item of messageArray" [ngClass]="{'bot-message': item.name === 'Chatbot', 'user-message': item.name !== 'Chatbot'}">
       <span>{{item.name}}: </span> {{item.message}}
     </div>
   </div>
-  
-</div>
-
+  <div class="chatbot-input">
+    <input id="input" type="text" placeholder="Say something..." autocomplete="off" [(ngModel)]='message' (keyup.enter)="sendMessage()"/>
+    <button (click)="sendMessage()">Send</button>
+  </div>
 </div>

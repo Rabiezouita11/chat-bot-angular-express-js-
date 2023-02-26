@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
  speak(string) {
   let u = new SpeechSynthesisUtterance(string);
   u.text = string;
-  u.lang = "en-US";
+  u.lang = "en-FR";
   u.volume = 1; //0-1 interval
   u.rate = 1;
   u.pitch = 1; //0-2 interval
